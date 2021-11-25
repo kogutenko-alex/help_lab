@@ -1,12 +1,13 @@
-package ua.laba.students;
+package ua.laba.students.model;
 
 import java.util.ArrayList;
+import java.util.TreeSet;
 
 public class Institute {
     private final String name;
-    private ArrayList<Faculty> faculties;
+    private TreeSet<Faculty> faculties;
 
-    public Institute(String name, ArrayList<Faculty> faculties) {
+    public Institute(String name, TreeSet<Faculty> faculties) {
         this.name = name;
         this.faculties = faculties;
     }
@@ -15,11 +16,11 @@ public class Institute {
         return name;
     }
 
-    public ArrayList<Faculty> getFaculties() {
+    public TreeSet<Faculty> getFaculties() {
         return faculties;
     }
 
-    public void setFaculties(ArrayList<Faculty> faculties) {
+    public void setFaculties(TreeSet<Faculty> faculties) {
         this.faculties = faculties;
     }
 }
