@@ -57,13 +57,14 @@ public class RectorialDepartment {
         TreeSet<Student> students = new TreeSet<>();
         Iterator<Faculty> IFaculties = institute.getFaculties()
                                                 .iterator();
+
         while (IFaculties.hasNext()) {
             Faculty faculty = IFaculties.next();
             Iterator<Student> IStudents = faculty.getStudents()
                                                  .iterator();
             while (IStudents.hasNext()) {
                 Student student = IStudents.next();
-                if(student.compare(student, student) == 1) {
+                if(new StudentCompare().compare(student, student) == 1) {
                     students.add(student);
                 }
 //                if (student.getAverageMark() >= 95 && student.getAverageMark() <= 100)

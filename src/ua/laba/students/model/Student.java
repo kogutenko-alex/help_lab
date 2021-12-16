@@ -2,7 +2,7 @@ package ua.laba.students.model;
 
 import java.util.Comparator;
 
-public class Student implements Comparator<Student>{
+public class Student {
     private final String name;
     private final int gradeBookNumber;
     private final int averageMark;
@@ -32,14 +32,5 @@ public class Student implements Comparator<Student>{
         return  String.format("%d %-35s %d", gradeBookNumber, name, averageMark);
     }
 
-    /*
-    Я не знал как лучше переопределить данную функцию
-    Этот вариант не хороший но как я вижу лучший
-     */
-    @Override
-    public int compare(Student student1, Student student2) {
-        if(student1.averageMark >= 95 && student2.averageMark <= 100) return 1;
-        else if(student1.averageMark <= 95 && student2.averageMark >= 100) return -1;
-        else return 0;
-    }
+
 }
